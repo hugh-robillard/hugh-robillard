@@ -1,0 +1,27 @@
+.skip-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skip-links__link {
+  position: absolute;
+  inset: var(--spacer-s) var(--spacer-s) auto;
+  display: block;
+  background-color: var(--color-green);
+  border: 0.125rem solid var(--color-black);
+  border-radius: var(--radius);
+  padding-block: var(--spacer-s);
+  padding-inline: var(--spacer-m);
+  color: var(--color-black);
+  text-align: center;
+  text-decoration: none;
+
+  &:where(:focus) {
+    outline: 0;
+  }
+
+  &:where(:not(:focus)) {
+    inset-block-start: -10rem;
+  }
+}

@@ -1,0 +1,27 @@
+.hero {
+  background-color: var(--color-green);
+
+  .container {
+    min-height: 60dvh;
+    align-items: flex-end;
+    padding-block: var(--spacer-xl);
+  }
+
+  .hero__content {
+    @media (width >= 45rem) {
+      grid-column: span 8;
+    }
+  }
+
+  .hero__headline {
+    margin-block-end: var(--spacer-m);
+    font-weight: 500;
+    font-size: var(--type-scale-xl);
+    margin-inline-start: -0.5rem;
+  }
+
+  .hero__byline {
+    font-size: var(--type-scale-h5);
+    margin: 0;
+  }
+}

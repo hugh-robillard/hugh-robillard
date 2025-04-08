@@ -1,0 +1,44 @@
+---
+import "./experience.css";
+import Card from "../Card/Card.astro";
+
+const experience_cards = [
+  {
+    img: "/images/i-bookkeeper.svg",
+    desc: "Successful history as treasurer and bookkeeper for 3 charities and two privately owned companies.",
+  },
+  {
+    img: "/images/i-support.svg",
+    desc: "Experience working with adults with disabilities through charities and as a supportive landlord.",
+  },
+  {
+    img: "/images/i-community.svg",
+    desc: "Proven track record of giving back to the community and going above and beyond what is required.",
+  },
+  {
+    img: "/images/i-managing.svg",
+    desc: "35 years managing the development of electronic devices in the hi-tech sector.",
+  },
+];
+---
+
+<section id="experience" class="section experience">
+  <div class="container">
+    <h2 class="section__title">Experience</h2>
+
+    <ul class="experience__grid">
+      {
+        experience_cards.map(({ img, desc }) => (
+          <li class="experience__item">
+            <Card>
+              <div class="card__image">
+                <img src={img} alt="" />
+              </div>
+              <p class="push-0">{desc}</p>
+            </Card>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

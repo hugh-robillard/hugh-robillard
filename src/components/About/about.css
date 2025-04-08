@@ -1,0 +1,26 @@
+.about {
+  background-color: var(--color-blue);
+
+  .section__image {
+    box-shadow: var(--shadow);
+    border: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--color-white);
+    align-self: flex-start;
+
+    img {
+      aspect-ratio: 1;
+    }
+  }
+
+  @media (width >= 65rem) {
+    .section__image {
+      grid-column: span 5;
+    }
+
+    .section__content {
+      grid-column: 7 / -1;
+    }
+  }
+}

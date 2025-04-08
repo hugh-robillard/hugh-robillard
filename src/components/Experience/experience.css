@@ -1,0 +1,40 @@
+.experience {
+  .section__title {
+    text-align: center;
+    margin-block-end: var(--spacer-base);
+  }
+}
+
+.experience__grid {
+  --cols: 1;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: var(--gap);
+
+  @media (width >= 45rem) {
+    --cols: 2;
+  }
+
+  @media (width >= 65rem) {
+    --cols: 4;
+  }
+}
+
+.experience__item {
+  display: flex;
+  container-type: inline-size;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card__image {
+    width: min(100%, 5rem);
+  }
+}

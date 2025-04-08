@@ -1,0 +1,25 @@
+---
+import "./button.css";
+import { applyClasses } from "../../lib/helpers.ts";
+
+const href = Astro.props.href;
+const ariaLabel = Astro.props["aria-label"];
+const external = Astro.props.external;
+
+const classes = ["btn"];
+
+if (external) {
+  classes.push("btn--external");
+}
+---
+
+<a
+  href={href}
+  class={applyClasses(classes)}
+  aria-label={ariaLabel}
+  target={external ? "_blank" : undefined}
+  rel={external ? "nofollow noopener noreferrer" : undefined}
+>
+  <slot />
+  {external && <i class="material-symbols-outlined">open_in_new</i>}
+</a>
