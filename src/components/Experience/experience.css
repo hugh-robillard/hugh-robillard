@@ -1,4 +1,6 @@
 .experience {
+  background-color: var(--color-blue);
+
   .section__title {
     text-align: center;
     margin-block-end: var(--spacer-base);

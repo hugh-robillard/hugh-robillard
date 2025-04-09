@@ -1,5 +1,5 @@
 .about {
-  background-color: var(--color-blue);
+  /* background-color: var(--color-blue); */
 
   .container {
     row-gap: var(--spacer-xl);
