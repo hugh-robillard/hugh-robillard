@@ -3,6 +3,7 @@
   border-radius: var(--radius);
   padding: var(--spacer-base);
   box-shadow: var(--shadow);
+  background-color: var(--color-background);
   transition: box-shadow var(--transition);
 
   &:has(.card__link) {
@@ -11,6 +12,10 @@
 
   &:has(.card__link:where(:hover, :focus-visible)) {
     box-shadow: var(--shadow-purple);
+  }
+
+  &.card--hov-blue:where(:hover, :focus-visible) {
+    box-shadow: var(--shadow-blue);
   }
 }
 

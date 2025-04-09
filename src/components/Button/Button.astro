@@ -21,5 +21,11 @@ if (external) {
   rel={external ? "nofollow noopener noreferrer" : undefined}
 >
   <slot />
-  {external && <i class="material-symbols-outlined">open_in_new</i>}
+  {
+    external && (
+      <i class="material-symbols-outlined" aria-hidden="true">
+        open_in_new
+      </i>
+    )
+  }
 </a>

@@ -1,0 +1,25 @@
+---
+import "./toggle.css";
+
+import { applyClasses } from "../../lib/helpers";
+const { target, desktop } = Astro.props;
+
+const classList = ["toggle"];
+
+if (desktop) classList.push("toggle--desktop");
+---
+
+<button
+  class={applyClasses(classList)}
+  aria-expanded="false"
+  aria-controls={target}
+  aria-label="Click to open mobile navigation"
+>
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</button>
+
+<script>
+  import "./toggle";
+</script>

@@ -1,14 +1,60 @@
-<footer class="footer">
-  <div class="container">
-    <a href="/">Hugh Robillard</a>
+---
+import "./footer.css";
 
-    <nav>
-      <ol>
-        <li><a href="#direct-funding">Direct Funding</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+const nav_items = [
+  {
+    url: "#direct-funding",
+    label: "Direct Funding",
+  },
+  {
+    url: "#about",
+    label: "About",
+  },
+  {
+    url: "#experience",
+    label: "Experience",
+  },
+  {
+    url: "#contact",
+    label: "Contact",
+  },
+];
+
+const year = new Date(Date.now()).getFullYear();
+---
+
+<footer class="footer">
+  <div class="container container--grid">
+    <a class="footer__logo" href="/">Hugh Robillard</a>
+
+    <nav class="footer__nav">
+      <ol class="footer__list">
+        {
+          nav_items.map(({ url, label }) => (
+            <li>
+              <a class="footer__link" href={url}>
+                {label}
+              </a>
+            </li>
+          ))
+        }
       </ol>
     </nav>
+  </div>
+  <div class="footer__sub">
+    <div class="container">
+      <small>&copy; {year} Hugh Robillard</small>
+
+      <small>
+        Designed and developed by
+        <a
+          href="https://adamrobillard.ca"
+          target="_blank"
+          rel="nofollow noreferrer noopener"
+        >
+          Adam Robillard
+        </a>
+      </small>
+    </div>
   </div>
 </footer>

@@ -89,7 +89,7 @@
   --color-white: #fff;
   --color-black: #000;
   --color-foreground: var(--color-black);
-  --color-background: var(--color-grey-lightest);
+  --color-background: var(--color-white);
 
   /* Containers */
   --container: 65rem;
@@ -138,6 +138,9 @@
     0.25rem 0.25rem 0 0.125rem var(--color-black);
   --shadow-purple:
     0.25rem 0.25rem 0 var(--color-purple),
+    0.25rem 0.25rem 0 0.125rem var(--color-black);
+  --shadow-blue:
+    0.25rem 0.25rem 0 var(--color-blue),
     0.25rem 0.25rem 0 0.125rem var(--color-black);
   --transition: 0.2s;
   --border: 0.125rem solid var(--color-black);

@@ -1,13 +1,18 @@
 .about {
   background-color: var(--color-blue);
 
+  .container {
+    row-gap: var(--spacer-xl);
+  }
+
   .section__image {
     box-shadow: var(--shadow);
     border: var(--border);
     border-radius: var(--radius);
     overflow: hidden;
     background-color: var(--color-white);
-    align-self: flex-start;
+    place-self: flex-start center;
+    width: min(100%, 25rem);
 
     img {
       aspect-ratio: 1;
